@@ -61,7 +61,7 @@ const RegisterSection = (props) => {
                 ?
                     <>
                         <h1 className="register-section__title">Working with POST request</h1>
-                    <RegisterForm setRegisterStatus={setRegisterStatus} positions={positions} token={token} />
+                        <RegisterForm setRegisterStatus={setRegisterStatus} positions={positions} token={token} />
                     </>
                 :
                     <>
