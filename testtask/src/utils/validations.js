@@ -8,8 +8,8 @@ const regEx = {
 const errorsMessages = {
     username: "Username should contain 2-60 characters",
     email: "Must be a valid email according to RFC2822",
-    phone: "Phone number should start with +380 and contain 9 numbers",
-    photo: "Photo must be jpeg/jpg type. The photo size must not be greater than 5 Mb"
+    phone: "Should start with +380 and contain 9 numbers",
+    photo: "Must be jpeg/jpg type, less than 5 Mb and min 70x70px"
 };
 
 
@@ -52,7 +52,7 @@ function validatePhone(phone) {
     return regEx.phone.test(phone);
 }
 
-async function validatePhoto(input) {
+function validatePhoto(input) {
     if (input.files[0]) {
         const image = input.files[0];
         const allowedExtensions = ["jpg", "jpeg", "JPG", "JPEG"];
@@ -66,8 +66,7 @@ async function validatePhoto(input) {
 
         const isExtensionValid = allowedExtensions.includes(extension);
         const isSizeValid = photoSize < maxSize;
-        const isPhotoPxSizesValid = await validatePxSizes(image, minPxWidth, minPxHeight);
-        console.log("isPhotoPxSizesValid", isPhotoPxSizesValid)
+        const isPhotoPxSizesValid = validatePxSizes(image, minPxWidth, minPxHeight);
         return isExtensionValid && isSizeValid && isPhotoPxSizesValid
     }
     return false

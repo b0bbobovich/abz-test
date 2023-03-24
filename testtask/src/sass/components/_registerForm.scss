@@ -29,7 +29,6 @@
     border: 1px solid #D0CFCF;
     border-radius: 4px;
     padding-left: 16px; 
-    box-sizing: border-box;
     margin-top: 50px;
     position: relative;
     outline: none;
@@ -177,3 +176,10 @@
     background: #B4B4B4;
 }
 
+.border-error {
+    border: 2px solid #CB3D40;;
+}
+
+.label-error {
+    color: #CB3D40;
+}
