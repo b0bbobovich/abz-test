@@ -56,11 +56,8 @@ const UsersSection = (props) => {
                 if (err.response) {
                     console.error(`${err.response.status} ERROR`);
                 }
-                else if (err.request) {
-                    console.error(err.request);
-                }
                 else {
-                    console.error(err.message);
+                    console.error(err);
                 }
             }
             finally {
@@ -78,7 +75,7 @@ const UsersSection = (props) => {
         );
     }
 
-    function onShowMoreClicked() {
+    function onShowMoreBtnClicked() {
         if (nextURL) {
             const queryParams = nextURL.split("?")[1];
             setQuery("?" + queryParams)
@@ -87,11 +84,11 @@ const UsersSection = (props) => {
 
     return (
         <section id="users-section" className="users-section">
-            <h1 className="users-section__title">Working with GET request</h1>
+            <h2 className="users-section__title">Working with GET request</h2>
             <UsersCards users={users} />
             {isLoading
                 ? <Preloader />
-                : nextURL && <button onClick = { onShowMoreClicked }>Show more</button>               
+                : nextURL && <button onClick = { onShowMoreBtnClicked }>Show more</button>               
             }
         </section>
     )

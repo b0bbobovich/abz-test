@@ -22,11 +22,8 @@ const RegisterSection = (props) => {
                 if (err.response) {
                     console.error("ERROR:", err.response.status);
                 }
-                else if (err.request) {
-                    console.error(err.request);
-                }
                 else {
-                    console.error(err.message);
+                    console.error(err);
                 }
             }
         };
@@ -44,11 +41,8 @@ const RegisterSection = (props) => {
                 if (err.response) {
                     console.error(err.response.status);
                 }
-                else if (err.request) {
-                    console.error(err.request);
-                }
                 else {
-                    console.error("Error", err.message);
+                    console.error(err);
                 }
             }
         };
@@ -60,12 +54,12 @@ const RegisterSection = (props) => {
             {registerStatus !== "successfull"
                 ?
                     <>
-                        <h1 className="register-section__title">Working with POST request</h1>
+                        <h2 className="register-section__title">Working with POST request</h2>
                         <RegisterForm setRegisterStatus={setRegisterStatus} positions={positions} token={token} />
                     </>
                 :
                     <>
-                        <h1 className="register-section__title">User successfully registered</h1>
+                        <h2 className="register-section__title">User successfully registered</h2>
                         <img src={successImage} alt="register-successfull" />
                     </>
             }

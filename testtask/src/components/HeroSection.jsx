@@ -1,5 +1,5 @@
 
-const Banner = (props) => {
+const HeroSection = (props) => {
     const { setRegisterStatus } = props;
 
     function scrollToSection(event) {
@@ -24,4 +24,4 @@ const Banner = (props) => {
     )
 }
 
-export default Banner
+export default HeroSection

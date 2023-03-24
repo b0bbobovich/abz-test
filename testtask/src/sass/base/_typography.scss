@@ -1,7 +1,7 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-h1 {
+h1, h2 {
   @include font-styling;
   text-align: center;
   font-size: 40px;

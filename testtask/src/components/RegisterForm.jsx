@@ -43,9 +43,6 @@ const RegisterForm = (props) => {
                 if (err.response) {
                     console.error("ERROR:", err.response.status );
                 }
-                else if (err.request) {
-                    console.error(err.request);
-                }
                 else {
                     console.error(err.message);
                 }

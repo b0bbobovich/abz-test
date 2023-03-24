@@ -7,13 +7,13 @@
 @import "./abstracts/animations";
 @import "./abstracts/functions";
 
-@import "./layout/navbar.scss";
+@import "./layout/header.scss";
+@import "./layout/heroSection.scss";
 @import "./layout/usersSection";
 @import "./layout/registerSection";
 
 @import "./components/cards";
 @import "./components/card";
-@import "./components/banner.scss";
 @import "./components/preloader";
 @import "./components/registerForm";
 
