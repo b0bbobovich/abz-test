@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+h1 {
+  @include font-styling;
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+p, span {
+  @include font-styling;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+label {
+  @include font-styling;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+legend {
+  @include font-styling;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+small {
+  @include font-styling;
+  font-size: 12px;
+  line-height: 14px;
+}

@@ -1,0 +1,24 @@
+@import "../abstracts/mixins";
+
+.register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 16px 100px 16px;  
+    @include tabletMinBreakpoint {
+        margin: 0 32px 100px 32px;
+    };
+    @include desktopMinBreakpoint {
+        margin: 0 60px 100px 60px;
+    };
+    @include widescreenMinBreakpoint {
+        margin: 0 695px 100px 695px;
+    };
+}
+
+
+.register-section__title {
+    color: rgba(0, 0, 0, 0.87);
+}
+

@@ -1,0 +1,57 @@
+@import "../abstracts/mixins";
+
+.user-card {
+    width: 100%;
+    height: 254px;    
+    background: #FFFFFF;
+    border-radius: 10px;
+    flex: 100%;
+    margin: 10px;
+    @include tabletMinBreakpoint {
+        max-width: 50%;
+        flex: 45%;
+        margin: 8px;
+    };
+    @include desktopMinBreakpoint {
+        max-width: 33.3%;
+        flex: 30%;
+        margin: 14.5px;
+    };
+}
+
+.user-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.user-card__photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    object-fit: cover;
+}
+
+.user-card__wrapper span {
+    width: 100%;
+    max-width: 200px;
+    color: rgba(0, 0, 0, 0.87);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-card__name{
+    margin-top: 20px;
+}
+
+.user-card__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; 
+}
+
+
+

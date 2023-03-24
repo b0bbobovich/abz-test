@@ -1,24 +1,11 @@
-import {
-    ComponentContainer,
-    SectionTitle,
-    UsersCardsContainer,
-    UserCard,
-    UserInfoContainer,
-    UserImg,
-    UserName,
-    UserDetailsContainer,
-    UserJobTitle,
-    UserEmail,
-    UserPhone,
-    Button,
-    Preloader
-} from "./UsersSection.styled";
+import UsersCards from "./UsersCards";
+import Preloader from "./Preloader";
 import { useState, useEffect } from "react";
-import { publicRequest } from "../../api/requestsMethods";
+import { publicRequest } from "../api/requestsMethods";
 
 
 const UsersSection = (props) => {
-    const { registerSuccessfull } = props;
+    const { registerStatus } = props;
     const [users, setUsers] = useState([]);
     const [query, setQuery] = useState("?page=1&count=6");
     const [nextURL, setNextURL] = useState(null);
@@ -29,7 +16,7 @@ const UsersSection = (props) => {
             setIsLoading(true);
             try {
                 const response = await publicRequest().get("/users?page=1&count=6");
-                console.log("response", response)
+                // console.log("response", response)
                 const sortedUsers = sortByTimestamp(response.data.users);
                 setUsers(sortedUsers);
                 setNextURL(response.data.links.next_url);
@@ -50,11 +37,10 @@ const UsersSection = (props) => {
             }
         }
 
-        if (registerSuccessfull) {
+        if (registerStatus === "successfull") {
             fetchData();
         }
-
-    }, [registerSuccessfull])
+    }, [registerStatus])
 
     useEffect(() => {
         async function fetchData() {
@@ -100,30 +86,14 @@ const UsersSection = (props) => {
     }
 
     return (
-        <ComponentContainer id="usersSection">
-            <SectionTitle>Working with GET request</SectionTitle>
-            <UsersCardsContainer>
-                {users && (
-                    users.map(user => (
-                        <UserCard key={user.id}>
-                            <UserInfoContainer>
-                                <UserImg src={user.photo} onError={(e) => e.target.src=process.env.PUBLIC_URL + "/photoCover.svg"} />
-                                <UserName>{user.name}</UserName>
-                                <UserDetailsContainer>
-                                    <UserJobTitle>{user.position}</UserJobTitle>
-                                    <UserEmail>{user.email}</UserEmail>
-                                    <UserPhone>{user.phone}</UserPhone>
-                                </UserDetailsContainer>
-                            </UserInfoContainer>
-                        </UserCard>
-                    )))
-                }
-            </UsersCardsContainer>
+        <section id="users-section" className="users-section">
+            <h1 className="users-section__title">Working with GET request</h1>
+            <UsersCards users={users} />
             {isLoading
-                ? <Preloader src={process.env.PUBLIC_URL + "/preloaderLogo.svg"}/>
-                : nextURL && <Button onClick = { onShowMoreClicked }>Show more</Button>               
+                ? <Preloader />
+                : nextURL && <button onClick = { onShowMoreClicked }>Show more</button>               
             }
-        </ComponentContainer>
+        </section>
     )
 }
 

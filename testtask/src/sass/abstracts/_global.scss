@@ -1,17 +1,16 @@
+@import '../base/typography';
+
 body {
-    margin: 0;
-    padding: 0;
     background-color: #F8F8F8;
 }
 
 button {
-    font-family : "Nunito";
     width: 100px;
     height: 34px;
     background: #F4E041;
     border: none;
     border-radius: 80px;
-    font-weight: 400;
-    font-size: 16px;
     cursor: pointer;
+    @include font-styling;
+    font-size: 16px;
 }

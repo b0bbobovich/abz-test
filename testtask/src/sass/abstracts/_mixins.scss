@@ -1,0 +1,32 @@
+@import "./variables";
+
+// Breakpoints
+@mixin mobileMinBreakpoint {
+    @media (min-width: #{$screen-mobile}) {
+        @content;
+    }
+}
+
+@mixin tabletMinBreakpoint {
+    @media (min-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktopMinBreakpoint {
+    @media (min-width: #{$screen-desktop}) {
+        @content;
+    }
+}
+
+@mixin widescreenMinBreakpoint {
+    @media (min-width: #{$screen-widescreen}) {
+        @content;
+    }
+}
+
+// Fonts
+@mixin font-styling {
+    font-family: $font-family;
+    font-weight: $font-weight;
+  }
