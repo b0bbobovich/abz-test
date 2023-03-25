@@ -1,6 +1,13 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('../../assets/fonts/Nunito-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1, h2 {
   @include font-styling;
   text-align: center;
