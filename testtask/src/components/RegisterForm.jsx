@@ -119,7 +119,7 @@ const RegisterForm = (props) => {
                                     required
                                     defaultChecked={index === 0} 
                                     />
-                                <label className="register-form__radio-input-label" htmlFor={item.name}>{item.name}</label>
+                                <label className="register-form__radio-input-label" htmlFor={item.id}>{item.name}</label>
                             </div>
                         )
                         ))}
