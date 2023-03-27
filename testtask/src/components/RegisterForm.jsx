@@ -2,6 +2,7 @@ import { useState } from "react";
 import Preloader from "./Preloader";
 import { authorizedRequest } from "../api/requestsMethods";
 import { validateInputs } from "../utils/validations";
+import { scrollToSection } from "../utils/scrolling";
 
 
 const RegisterForm = (props) => {
@@ -37,6 +38,7 @@ const RegisterForm = (props) => {
                 await authorizedRequest(token).post("/users", payload);
                 // console.log(response)
                 setFileName("Upload your photo");
+                scrollToSection("users-section");
                 setRegisterStatus("successfull");
             }
             catch (err) {

@@ -25,9 +25,6 @@ const UsersSection = (props) => {
                 if (err.response) {
                     console.error(`${err.response.status} ERROR`);
                 }
-                else if (err.request) {
-                    console.error(err.request);
-                }
                 else {
                     console.error(err.message);
                 }
