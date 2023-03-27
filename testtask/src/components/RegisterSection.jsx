@@ -60,7 +60,7 @@ const RegisterSection = (props) => {
                 :
                     <>
                         <h2 className="register-section__title">User successfully registered</h2>
-                        <img src={successImage} alt="register-successfull" />
+                        <img className="register-section__success-image" src={successImage} alt="register-successfull" />
                     </>
             }
         </section>

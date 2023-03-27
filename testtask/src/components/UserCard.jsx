@@ -5,7 +5,13 @@ const UserCard = (props) => {
     return (
         <div className="user-card">
             <div className="user-card__wrapper">
-                <img className="user-card__photo" src={user.photo} onError={(e) => {if (e.target.src !== photoCover) e.target.src = photoCover}} alt="user"/>
+                <img
+                    className="user-card__photo"
+                    src={user.photo}
+                    onError={(e) => { if (e.target.src !== photoCover) e.target.src = photoCover }}
+                    alt="user"
+                    loading="lazy" 
+                />
                 <span className="user-card__name">{user.name}</span>
                 <div className="user-card__details">
                     <span className="user-card__job-title">{user.position}</span>

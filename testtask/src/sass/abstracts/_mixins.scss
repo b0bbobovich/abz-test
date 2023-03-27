@@ -1,12 +1,6 @@
 @import "./variables";
 
 // Breakpoints
-@mixin mobileMinBreakpoint {
-    @media (min-width: #{$screen-mobile}) {
-        @content;
-    }
-}
-
 @mixin tabletMinBreakpoint {
     @media (min-width: #{$screen-tablet}) {
         @content;
