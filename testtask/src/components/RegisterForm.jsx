@@ -128,13 +128,13 @@ const RegisterForm = (props) => {
                 </fieldset>
                 <div className={validationErrors.photo ? "register-form__upload-inputs-wrapper border-error" : "register-form__upload-inputs-wrapper"}>
                     <label className={validationErrors.photo ? "register-form__upload-input-label border-error" : "register-form__upload-input-label"} htmlFor="file-upload">Upload</label>
-                    <input className="register-form__upload-disabled-input" id="file-selected" placeholder={fileName} disabled/>
+                    <span className={fileName === "Upload your photo" ? "register-form__upload-placeholder" : "register-form__upload-placeholder active-placeholder"}>{fileName}</span>
                     <input
                         className="register-form__upload-input"
                         id="file-upload"
                         name="photo"
                         type="file"
-                        accept="image/png, image/jpeg, image/jpg"
+                        accept="image/jpeg, image/jpg"
                         onChange={(event) => {
                             setFileName(event.target.files.item(0).name);
                             cleanValidationError(event.target.name)
