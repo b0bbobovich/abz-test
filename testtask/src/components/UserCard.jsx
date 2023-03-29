@@ -12,11 +12,11 @@ const UserCard = (props) => {
                     alt="user"
                     loading="lazy" 
                 />
-                <span className="user-card__name">{user.name}</span>
+                <span className="user-card__name" title={user.name}>{user.name}</span>
                 <div className="user-card__details">
-                    <span className="user-card__job-title">{user.position}</span>
-                    <span className="user-card__email">{user.email}</span>
-                    <span className="user-card__phone">{user.phone}</span>
+                    <span className="user-card__job-title" title={user.position}>{user.position}</span>
+                    <span className="user-card__email" title={user.email}>{user.email}</span>
+                    <span className="user-card__phone" title={user.phone}>{user.phone}</span>
                 </div>
             </div>
         </div>
