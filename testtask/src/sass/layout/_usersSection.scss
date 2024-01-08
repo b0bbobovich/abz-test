@@ -1,23 +1,22 @@
-@import "../abstracts/mixins";
+@import '../abstracts/mixins';
 
 .users-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 140px 16px;
-    @include tabletMinBreakpoint {
-        margin: 140px 32px;
-    };
-    @include desktopMinBreakpoint {
-        margin: 140px 60px;
-    };
-    @include widescreenMinBreakpoint {
-        margin: 140px 696px;
-    };    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 140px 16px;
+  @include tabletMinBreakpoint {
+    margin: 140px 32px;
+  }
+  @include desktopMinBreakpoint {
+    margin: 140px 60px;
+  }
+  @include widescreenMinBreakpoint {
+    margin: 140px 696px;
+  }
 }
 
 .users-section__title {
-    color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.87);
 }
-

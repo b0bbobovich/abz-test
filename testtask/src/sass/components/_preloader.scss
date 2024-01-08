@@ -1,7 +1,7 @@
-@import "../abstracts/animations";
+@import '../abstracts/animations';
 
 .spinner {
-    width: 34px;
-    height: 34px;
-    animation: spin 1s linear infinite;
+  width: 34px;
+  height: 34px;
+  animation: spin 1s linear infinite;
 }

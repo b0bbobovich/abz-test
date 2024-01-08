@@ -1,19 +1,17 @@
-@import "./base/normalize";
-@import "./base/typography";
+@import './base/normalize';
+@import './base/typography';
 
-@import "./abstracts/variables";
-@import "./abstracts/mixins";
-@import "./abstracts/global";
-@import "./abstracts/animations";
-@import "./abstracts/functions";
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/global';
+@import './abstracts/animations';
 
-@import "./layout/header.scss";
-@import "./layout/heroSection.scss";
-@import "./layout/usersSection";
-@import "./layout/registerSection";
+@import './layout/header.scss';
+@import './layout/heroSection.scss';
+@import './layout/usersSection';
+@import './layout/registerSection';
 
-@import "./components/cards";
-@import "./components/card";
-@import "./components/preloader";
-@import "./components/registerForm";
-
+@import './components/cards';
+@import './components/card';
+@import './components/preloader';
+@import './components/registerForm';

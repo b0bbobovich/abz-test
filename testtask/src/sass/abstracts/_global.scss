@@ -1,18 +1,17 @@
 @import '../base/typography';
 
 body {
-    background-color: #F8F8F8;
-
+  background-color: #f8f8f8;
 }
 
 button {
-    width: 100px;
-    height: 34px;
-    color: #000000;
-    background: #F4E041;
-    border: none;
-    border-radius: 80px;
-    cursor: pointer;
-    @include font-styling;
-    font-size: 16px;
+  width: 100px;
+  height: 34px;
+  color: #000000;
+  background: #f4e041;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  @include font-styling;
+  font-size: 16px;
 }

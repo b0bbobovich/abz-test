@@ -1,36 +1,35 @@
-@import "../abstracts/mixins";
+@import '../abstracts/mixins';
 
 .navbar {
-    height: 60px;
-    background: #FFFFFF;
+  height: 60px;
+  background: #ffffff;
 }
 
 .navbar__wrapper {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    margin: 0 16px;
-    @include tabletMinBreakpoint {
-        margin: 0 32px;
-    }
-    @include desktopMinBreakpoint {
-        margin: 0 60px;
-    }
-    @include widescreenMinBreakpoint {
-        margin: 0 695px;
-    }
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px;
+  @include tabletMinBreakpoint {
+    margin: 0 32px;
+  }
+  @include desktopMinBreakpoint {
+    margin: 0 60px;
+  }
+  @include widescreenMinBreakpoint {
+    margin: 0 695px;
+  }
 }
 
 .navbar__logo {
-    height: 26px;
-    width: 104px;
+  height: 26px;
+  width: 104px;
 }
 
 .navbar__buttons-container {
-    width: 210px;
-    height: 34px;
-    display: flex;
-    justify-content: space-between;
+  width: 210px;
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
 }
-

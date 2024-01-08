@@ -1,17 +1,13 @@
-import UserCard from "./UserCard";
+import UserCard from './UserCard';
 
 const UsersCards = (props) => {
-    const { users } = props;
+  const { users } = props;
 
-    return (
-        <div className="users-cards">
-            {users && (
-                users.map(user => (
-                    <UserCard key={user.id} user={user} />
-                    )))
-            }
-        </div>
-    )
-}
+  return (
+    <div className='users-cards'>
+      {users && users.map((user) => <UserCard key={user.id} user={user} />)}
+    </div>
+  );
+};
 
-export default UsersCards
+export default UsersCards;
